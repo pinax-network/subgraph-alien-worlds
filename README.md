@@ -1,4 +1,4 @@
-# Subgraph: `TEMPLATE`
+# Subgraph: `Alien Worlds`
 
 > Transactions, Decoded Actions & Database Operations
 >
@@ -13,13 +13,26 @@
 
 ## Smart Contracts
 
-- `eosio.token`
+- `stkvt.worlds`
+- `index.worlds`
+- `awlndratings`
+- `alien.worlds`
+- `msig.worlds`
+- `boost.worlds`
+- `dao.worlds`
+- `m.federation`
+- `other.worlds`
+- `s.federation`
+- `federation`
+- `token.worlds`
+- `uspts.worlds`
 
 ## Subgraph
 
 - **API Key**: https://thegraph.com/studio/apikeys/
 - **Base URL**: https://gateway.thegraph.com/api
-- **Subgraph ID**: `<SUBGRAPH ID>`
+- **Subgraph ID**: `4UETM9eMQ4Y4otae5sjJscniNhmDUhCDwWTfXm6Tpm14`
+- **Subgraph NFT**: `23317001931136309735161165219853275934923531233862675639721744478109748611915`
 - **Query URL format**: `{base_url}`/api/`{api-key}`/subgraphs/id/`{subgraph_id}`
 
 ## GraphQL
@@ -49,28 +62,3 @@
   }
 }
 ```
-
-### Example queries
-- `code:mycontract`
-- `code:tethertether && action:issue`
-- `code:eosio.token && action:transfer && (data.to:myaccount || data.from:myaccount)`
-- `auth:myaccount@active`
-- `code:atomicassets && action:logmint`
-
-### Available query fields
-These are the expressions that can be used in queries:
-- `action:<action_name>` - action name
-- `code:<account>` - smart contract account name
-- `receiver:<account>` - action receiver account
-- `auth:` - account which authority was used to sign the action, i.e.
-  - `auth:<account>` - account with any permission
-  - `auth:<account>@<permission>` - account with a specific permission
-- `input:true` - will match only the top-level actions
-- `notif:true` - will match only notifications, excluding input action or other inline actions.
-- `data.<field>:` - will decode and match action parameters (doesn't support nested objects). Some examples:
-  - `data.from:myaccount`
-  - `data.memo:"your daily staking rewards"`
-- `db.table:<table_name>`
-- `db.table:<table_name>/<scope>`
-
-Queries can include `&&` and `||` logical operands, as well as `(` and `)` parenthesis.

@@ -1,8 +1,6 @@
 .PHONY: all
 all:
 	make build
-	make create
-	make deploy
 
 .PHONY: build
 build:
@@ -10,11 +8,9 @@ build:
 
 .PHONY: deploy
 deploy:
-	graph deploy --node=http://localhost:8020 tokens
-
-.PHONY: create
-create:
-	graph create --node http://localhost:8020 tokens
+	graph build
+	graph create --node http://localhost:8020 alien-worlds
+	graph deploy --node=http://localhost:8020 alien-worlds
 
 .PHONY: publish
 publish:
@@ -23,4 +19,4 @@ publish:
 
 .PHONY: gui
 gui:
-	substreams gui ./substreams/wax-transactions-v0.3.9.spkg -e wax.substreams.pinax.network:443 graph_out -s 326292294 --params "graph_out=code:eosio.token && notif:false"
+	substreams gui ./substreams/wax-transactions-v0.3.9.spkg -e wax.substreams.pinax.network:443 graph_out -s 326292294 --params "graph_out=(code:stkvt.worlds || code:index.worlds || code:awlndratings || code:alien.worlds || code:msig.worlds || code:boost.worlds || code:dao.worlds || code:m.federation || code:other.worlds || code:s.federation || code:federation || code:token.worlds || code:uspts.worlds) && notif:false"
