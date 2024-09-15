@@ -15,8 +15,8 @@ deploy:
 .PHONY: publish
 publish:
 	graph build
-	graph publish --subgraph-id "<SUBGRAPH ID>"
+	graph publish --subgraph-id 4UETM9eMQ4Y4otae5sjJscniNhmDUhCDwWTfXm6Tpm14
 
 .PHONY: gui
 gui:
-	substreams gui ./substreams/wax-transactions-v0.3.9.spkg -e wax.substreams.pinax.network:443 graph_out -s 326292294 --params "graph_out=(code:stkvt.worlds || code:index.worlds || code:awlndratings || code:alien.worlds || code:msig.worlds || code:boost.worlds || code:dao.worlds || code:m.federation || code:other.worlds || code:s.federation || code:federation || code:token.worlds || code:uspts.worlds) && notif:false"
+	substreams gui ./substreams/wax-transactions-v0.4.2.spkg -e wax.substreams.pinax.network:443 graph_out -s 326292294 --params "graph_out=(code:stkvt.worlds || code:index.worlds || code:awlndratings || code:alien.worlds || code:msig.worlds || code:boost.worlds || code:dao.worlds || code:m.federation || code:other.worlds || code:s.federation || code:federation || code:token.worlds || code:uspts.worlds) && notif:false"

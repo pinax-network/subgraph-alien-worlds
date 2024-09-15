@@ -29,8 +29,8 @@
 
 ## Subgraph
 
-- **API Key**: https://thegraph.com/studio/apikeys/
-- **Base URL**: https://gateway.thegraph.com/api
+- **API Key**: <https://thegraph.com/studio/apikeys/>
+- **Base URL**: <https://gateway.thegraph.com/api>
 - **Subgraph ID**: `4UETM9eMQ4Y4otae5sjJscniNhmDUhCDwWTfXm6Tpm14`
 - **Subgraph NFT**: `23317001931136309735161165219853275934923531233862675639721744478109748611915`
 - **Query URL format**: `{base_url}`/api/`{api-key}`/subgraphs/id/`{subgraph_id}`
